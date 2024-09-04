@@ -1,0 +1,100 @@
+.course-description {
+  padding: 80px 20px;
+  text-align: center;
+  min-height: 55vh;
+  background-color: #f9f9f9; /* Light background for contrast */
+  position: relative;
+  overflow: hidden;
+
+  /* Decorative Background Elements */
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(138, 75, 175, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  &:before {
+    top: -100px;
+    left: -100px;
+  }
+
+  &:after {
+    bottom: -100px;
+    right: -100px;
+  }
+
+  .course-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out content and button */
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    max-width: 1000px; /* Max width for better layout control */
+    margin: 0 auto; /* Centering the content */
+
+    /* Card Styling */
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+    .course-info {
+      text-align: left;
+      max-width: 600px;
+
+      h2 {
+        font-size: 28px;
+        color: #8a4baf;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.6;
+        margin: 10px 0;
+      }
+    }
+
+    .course-image {
+      width: 320px;
+      height: 290px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .button-container {
+      display: flex;
+      align-items: center;
+
+      .common-btn {
+        background-image: linear-gradient(135deg, #f9c5d1 0%, #9795ef 100%);
+        color: #fff;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+/* AdminDashboard.css */
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1250px;
+  gap: 30px; /* Adds space between the boxes */
+  padding: 40px;
+  background-color: #f5f5f5; /* Subtle background color for contrast */
+  min-height: 70vh;
+}
+
+.box {
+  background: linear-gradient(
+    135deg,
+    #8a4baf,
+    #432456
+  ); /* Modern gradient background */
+  color: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Fixed width for a consistent look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  cursor: pointer;
+}
+
+.box:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.box p {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.box p:first-of-type {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .box {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 400px;
+  }
+}

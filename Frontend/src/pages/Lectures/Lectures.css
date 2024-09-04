@@ -1,0 +1,149 @@
+.lecture-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 80vh;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    flex: 2;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    video {
+      border-radius: 8px;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      color: #666;
+    }
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .lecture-form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        color: #8a4baf;
+        margin-bottom: 15px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: left;
+        max-width: 400px;
+        margin: 0 auto;
+
+        label {
+          font-size: 14px;
+          color: #333;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="file"] {
+          cursor: pointer;
+        }
+
+        video {
+          margin-top: 10px;
+          border-radius: 8px;
+        }
+
+        button {
+          margin-top: 15px;
+          background: linear-gradient(135deg, #f9c5d1, #9795ef);
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background 0.3s ease;
+
+          &:hover {
+            background: linear-gradient(135deg, #9795ef, #f9c5d1);
+          }
+        }
+      }
+    }
+
+    .lecture-number {
+      background: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: #8a4baf;
+        color: #fff;
+      }
+
+      &.active {
+        background-color: #8a4baf;
+        color: #fff;
+      }
+    }
+
+    button.delete-btn {
+      background: #ff4d4d;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: #ff1a1a;
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.admin-courses {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 40px;
+  width: 81vw;
+  background-color: #f0f2f5;
+}
+
+.left {
+  flex: 1;
+  padding: 20px;
+}
+
+.left h1 {
+  font-size: 2.5rem;
+  color: #8a4baf;
+  margin: 30px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.left h1::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-color: #8a4baf;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.dashboard-content {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.right {
+  flex: 0 1 350px;
+}
+
+.add-course {
+  background: linear-gradient(135deg, #ffffff, #f8f9fb);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-course:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.course-form h2 {
+  font-size: 22px;
+  color: #6c63ff;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.course-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow: hidden;
+}
+
+.course-form label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.course-form input,
+.course-form select {
+  width: 92%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.course-form input:focus,
+.course-form select:focus {
+  border-color: #6c63ff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
+}
+
+.course-form button {
+  padding: 10px 15px;
+  background-color: #6c63ff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.course-form button:hover {
+  background-color: #574bff;
+  transform: scale(1.05);
+}
+
+.course-form img {
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .admin-courses {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+
+  .left {
+    width: 100%;
+  }
+}

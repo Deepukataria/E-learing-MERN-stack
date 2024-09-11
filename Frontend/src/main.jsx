@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import { UserContextProvider } from "./Context/UserContext.jsx";
 import { CourseContextProvider } from "./Context/CourseContext.jsx";
+import './index.css';
 
 export const server = "https://e-learning-exv8.onrender.com";
 
